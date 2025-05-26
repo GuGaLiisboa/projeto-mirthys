@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0e0e11;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #0a0a0c;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2a2a2e;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  padding: 4rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #b0b0b5;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.buttons button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.buttons .primary {
+  background: white;
+  color: black;
+}
+
+.buttons .secondary {
+  background: #1a1a1d;
+  color: white;
+  border: 1px solid #2a2a2e;
+}
+
+.hero-img {
+  width: 400px;
+  height: 250px;
+  background: #e5e5e5;
+  border-radius: 12px;
+}
+
+/* Sections */
+.section {
+  padding: 3rem 2rem;
+}
+
+.section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.section p {
+  text-align: center;
+  color: #b0b0b5;
+  margin-bottom: 2rem;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: #1a1a1d;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card .image {
+  height: 160px;
+  background: #e5e5e5;
+}
+
+.card .content {
+  padding: 1rem;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: #b0b0b5;
+  font-size: 0.95rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem 1rem;
+  color: #888;
+}
+
+/* View All Button */
+.view-all {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.view-all button {
+  background: white;
+  color: black;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+/* Categorias */
+.categorias {
+  padding: 4rem 2rem;
+}
+
+.categorias h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.categorias p {
+  text-align: center;
+  color: #b0b0b5;
+  margin-bottom: 2rem;
+}
+
+.grid-categorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.categoria-card {
+  background: #1a1a1d;
+  border-radius: 12px;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.categoria-card:hover {
+  background: #2a2a2e;
+}
+
+.categoria-card .icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.categoria-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.categoria-card p {
+  color: #b0b0b5;
+  font-size: 0.9rem;
+}
+
+/* Categorias */
+.categorias {
+  padding: 4rem 2rem;
+}
+
+.categorias h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.categorias p {
+  text-align: center;
+  color: #b0b0b5;
+  margin-bottom: 2rem;
+}
+
+.grid-categorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.categoria-card {
+  background: #1a1a1d;
+  border-radius: 12px;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.categoria-card:hover {
+  background: #2a2a2e;
+}
+
+.categoria-card .icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.categoria-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.categoria-card p {
+  color: #b0b0b5;
+  font-size: 0.9rem;
+}
