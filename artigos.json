@@ -1,0 +1,305 @@
+[
+  {
+    "titulo": "Arquitetura e Organização dos Computadores",
+    "descricao": "Entenda os fundamentos da arquitetura e organização dos computadores, incluindo CPU, memória, dispositivos e barramentos.",
+    "categoria": "Hardware",
+    "tempo": "12 min",
+    "imagem": "img/arquitetura.jpg",
+    "slug": "arquitetura-e-organizacao",
+    "conteudo": [
+      {
+        "tipo": "titulo",
+        "texto": "Mergulhando no Universo dos Computadores: Conceitos Fundamentais"
+      },
+      {
+        "tipo": "paragrafo",
+        "texto": "Seja bem-vindo ao nosso espaço dedicado a desvendar os mistérios e maravilhas da tecnologia! No artigo de hoje, vamos explorar os alicerces da computação, abordando desde a sua estrutura básica até os componentes que permitem o seu funcionamento."
+      },
+      {
+        "tipo": "subtitulo",
+        "texto": "1. Arquitetura versus Organização de Computadores"
+      },
+      {
+        "tipo": "paragrafo",
+        "texto": "Arquitetura de Computadores: Refere-se aos atributos de um sistema que são visíveis ao programador..."
+      },
+      {
+        "tipo": "paragrafo",
+        "texto": "Organização de Computadores: Trata-se de como as características arquiteturais são implementadas..."
+      },
+      {
+        "tipo": "paragrafo",
+        "texto": "Em resumo: A arquitetura diz o que o computador faz, enquanto a organização descreve como ele faz. A arquitetura é um contrato entre o hardware e o software, enquanto a organização é a forma como esse contrato é cumprido."
+      },
+      {
+        "tipo": "referencias",
+        "itens": [
+          "Stallings, W. (2019). Arquitetura e Organização de Computadores (10ª ed.). Pearson Education do Brasil.",
+          "Patterson, D. A., & Hennessy, J. L. (2017). Organização e Projeto de Computadores: A Interface Hardware/Software (5ª ed.). Elsevier."
+        ]
+      },
+      {
+        "tipo": "subtitulo",
+        "texto": "2. Uma Viagem pela História: A Evolução dos Computadores"
+      },
+      {
+        "tipo": "paragrafo",
+        "texto": "A história dos computadores é uma fascinante jornada de inovação, marcada por avanços tecnológicos que transformaram radicalmente a sociedade. Podemos dividir essa evolução em gerações, cada uma caracterizada por uma tecnologia predominante."
+      },
+      {
+        "tipo": "lista",
+        "itens": [
+          "Primeira Geração (1940–1956): Válvulas eletrônicas.",
+          "Segunda Geração (1956–1963): Transistores.",
+          "Terceira Geração (1964–1971): Circuitos integrados.",
+          "Quarta Geração (1971–Presente): Microprocessadores.",
+          "Quinta Geração (Atual): Inteligência artificial e processamento paralelo massivo."
+        ]
+      },
+      {
+        "tipo": "referencias",
+        "itens": [
+          "Tanenbaum, A. S., & Austin, T. (2013). Organização Estruturada de Computadores (6ª ed.). Pearson Education.",
+          "Ifrah, G. (2001). História Universal dos Algarismos. Nova Fronteira."
+        ]
+      },
+      {
+        "tipo": "subtitulo",
+        "texto": "3. Modelos de Computadores: Von Neumann versus Harvard"
+      },
+      {
+        "tipo": "paragrafo",
+        "texto": "Dois modelos arquitetônicos fundamentais influenciaram o design da maioria dos computadores modernos: a arquitetura de Von Neumann e a arquitetura de Harvard."
+      },
+      {
+        "tipo": "lista",
+        "itens": [
+          "Von Neumann: Memória única para dados e instruções. Mais simples, porém com gargalo.",
+          "Harvard: Memórias separadas para dados e instruções. Mais rápido, usado em microcontroladores."
+        ]
+      },
+      {
+        "tipo": "referencias",
+        "itens": [
+          "Null, L., & Lobur, J. (2014). Princípios de Arquitetura e Organização de Computadores. Bookman.",
+          "Wikipedia: Von Neumann architecture, Harvard architecture."
+        ]
+      },
+      {
+        "tipo": "subtitulo",
+        "texto": "4. O Cérebro do Computador: Unidade Central de Processamento (CPU)"
+      },
+      {
+        "tipo": "lista",
+        "itens": [
+          "Unidade de Controle (UC): Coordena e controla todas as operações da CPU.",
+          "Unidade Lógica e Aritmética (ULA): Realiza operações aritméticas e lógicas.",
+          "Registradores: Armazenamento rápido para dados temporários."
+        ]
+      },
+      {
+        "tipo": "paragrafo",
+        "texto": "A velocidade da CPU é medida em Hertz (Hz), normalmente em GHz."
+      },
+      {
+        "tipo": "referencias",
+        "itens": [
+          "Hennessy, J. L., & Patterson, D. A. (2013). Arquitetura de Computadores: Uma Abordagem Quantitativa (5ª ed.). Elsevier.",
+          "Wikipedia: Central processing unit."
+        ]
+      },
+      {
+        "tipo": "subtitulo",
+        "texto": "5. A Memória de Curto Prazo: Memória Principal (RAM)"
+      },
+      {
+        "tipo": "lista",
+        "itens": [
+          "Volátil: Perde os dados ao desligar.",
+          "Acesso aleatório e alta velocidade.",
+          "Tipos: DRAM (mais comum) e SRAM (mais rápida e cara)."
+        ]
+      },
+      {
+        "tipo": "referencias",
+        "itens": [
+          "Wikipedia: Random-access memory.",
+          "Comer, D. E. (2018). Essentials of Computer Architecture. CRC Press."
+        ]
+      },
+      {
+        "tipo": "subtitulo",
+        "texto": "6. A Interface com o Mundo: Dispositivos de Entrada e Saída (E/S)"
+      },
+      {
+        "tipo": "lista",
+        "itens": [
+          "Entrada: Teclado, mouse, scanner, microfone, webcam.",
+          "Saída: Monitor, impressora, alto-falantes, projetor.",
+          "E/S: Tela touch, modem, pen drives."
+        ]
+      },
+      {
+        "tipo": "referencias",
+        "itens": [
+          "Wikipedia: Input/output.",
+          "Brookshear, J. G., & Brylow, D. (2019). Ciência da Computação: Uma Visão Abrangente (12ª ed.). Bookman."
+        ]
+      },
+      {
+        "tipo": "subtitulo",
+        "texto": "7. As Vias de Comunicação: Sistemas de Interconexão (Barramentos)"
+      },
+      {
+        "tipo": "lista",
+        "itens": [
+          "Barramento de Dados: Transfere dados.",
+          "Barramento de Endereços: Identifica posições de memória.",
+          "Barramento de Controle: Coordena as operações.",
+          "Tipos: Barramento do processador, de memória, e de E/S."
+        ]
+      },
+      {
+        "tipo": "referencias",
+        "itens": [
+          "Stallings, W. (2019). Arquitetura e Organização de Computadores (10ª ed.). Pearson Education do Brasil.",
+          "Wikipedia: Bus (computing)."
+        ]
+      }
+    ]
+  },
+
+  {
+    "titulo": "Guia Completo para Construção de uma API RESTful com Spring Boot",
+    "descricao": "Aprenda como desenvolver, documentar, testar, proteger e fazer deploy de APIs RESTful com Spring Boot, JWT e Swagger.",
+    "categoria": "Back-end",
+    "tempo": "18 min",
+    "imagem": "img/springboot_api.jpg",
+    "slug": "api-rest-spring-boot",
+    "conteudo": [
+      {
+        "tipo": "titulo",
+        "texto": "Resumo"
+      },
+      {
+        "tipo": "paragrafo",
+        "texto": "Este guia aprimorado expande cada etapa do desenvolvimento de uma API RESTful com Spring Boot, acrescentando explicações sobre por que cada escolha e configuração é importante. Iniciamos com os princípios do estilo REST e HATEOAS, avançamos pela configuração rápida via Spring Initializr, detalhamos a implementação de CRUD com Spring Data JPA, exploramos como personalizar a serialização JSON com Jackson, descrevemos o tratamento global de erros com @ControllerAdvice, demonstramos a configuração de segurança com Spring Security e JWT, explicamos como gerar documentação interativa com Swagger/OpenAPI, abordamos estratégias de testes automatizados e boas práticas REST, e concluímos com o processo de deploy em Heroku e sugestões de escalabilidade e CI/CD. Você ganhará não apenas o “como”, mas também o “porquê” por trás de cada passo, garantindo compreensão mais profunda e autonomia para adaptar o fluxo às suas necessidades."
+      },
+      {
+        "tipo": "subtitulo",
+        "texto": "1. Estilo REST e HATEOAS"
+      },
+      {
+        "tipo": "paragrafo",
+        "texto": "O REST é um estilo arquitetural que define quatro restrições principais (cliente-servidor, sem estado, cache, sistema em camadas) para garantir escalabilidade e simplicidade em sistemas distribuídos roy.gbiv.com. Em REST, recursos são abstrações que representam dados (por exemplo, “usuários” ou “pedidos”) e são identificados por URIs únicas, enquanto as operações são realizadas via métodos HTTP (GET, POST, PUT, DELETE) roy.gbiv.com."
+      },
+      {
+        "tipo": "paragrafo",
+        "texto": "HATEOAS (Hypermedia as the Engine of Application State) é o quinto nível no Modelo de Maturidade Richardson, onde cada resposta inclui links dinâmicos para outras ações disponíveis, permitindo que clientes descubram funcionalidades sem documentação externa martinfowler.com. Isso melhora a evolutividade da API, pois novos fluxos podem ser introduzidos sem alterar clientes existentes."
+      },
+      {
+        "tipo": "subtitulo",
+        "texto": "2. Configurando o Projeto com Spring Initializr"
+      },
+      {
+        "tipo": "paragrafo",
+        "texto": "O Spring Initializr permite gerar projetos com dependências como Spring Web, Data JPA, Security e Swagger."
+      },
+      {
+        "tipo": "lista",
+        "itens": [
+          "Projeto: Maven",
+          "Linguagem: Java",
+          "Versão do Spring Boot: última estável",
+          "Dependências: Spring Web, Spring Data JPA, Spring Security, Springdoc OpenAPI"
+        ]
+      },
+      {
+        "tipo": "subtitulo",
+        "texto": "3. CRUD com Spring Data JPA"
+      },
+      {
+        "tipo": "paragrafo",
+        "texto": "Defina entidades com @Entity e repositórios com JpaRepository. Use serviços para regras de negócio e controllers REST para rotas."
+      },
+      {
+        "tipo": "subtitulo",
+        "texto": "4. Customizando a Serialização JSON"
+      },
+      {
+        "tipo": "lista",
+        "itens": [
+          "Datas com JavaTimeModule",
+          "Snake case com PropertyNamingStrategy",
+          "Excluir campos nulos com @JsonInclude"
+        ]
+      },
+      {
+        "tipo": "subtitulo",
+        "texto": "5. Tratamento Global de Erros"
+      },
+      {
+        "tipo": "paragrafo",
+        "texto": "Use @ControllerAdvice com @ExceptionHandler para padronizar respostas de erro."
+      },
+      {
+        "tipo": "subtitulo",
+        "texto": "6. Segurança com Spring Security e JWT"
+      },
+      {
+        "tipo": "paragrafo",
+        "texto": "Configure SecurityFilterChain e autenticação com JWT. Use filtros e controle de acesso com @PreAuthorize."
+      },
+      {
+        "tipo": "subtitulo",
+        "texto": "7. Documentação com Swagger/OpenAPI"
+      },
+      {
+        "tipo": "paragrafo",
+        "texto": "Use springdoc-openapi e anotações como @Operation e @Schema para gerar /swagger-ui.html."
+      },
+      {
+        "tipo": "subtitulo",
+        "texto": "8. Testes Automatizados e Boas Práticas"
+      },
+      {
+        "tipo": "lista",
+        "itens": [
+          "Use @WebMvcTest com MockMvc",
+          "Versionamento de API",
+          "Códigos de status corretos",
+          "Coleções no Postman"
+        ]
+      },
+      {
+        "tipo": "subtitulo",
+        "texto": "9. Deploy em Nuvem e Considerações Finais"
+      },
+      {
+        "tipo": "lista",
+        "itens": [
+          "Deploy no Heroku com variáveis de ambiente",
+          "Escalabilidade com AWS",
+          "Pipelines CI/CD com GitLab CI ou similares"
+        ]
+      },
+      {
+        "tipo": "subtitulo",
+        "texto": "Referências"
+      },
+      {
+        "tipo": "referencias",
+        "itens": [
+          "Fielding, R. — REST (2000)",
+          "Fowler, M. — Richardson Maturity Model (2008)",
+          "Spring.io Guides",
+          "Baeldung — Spring Data JPA, Jackson, JWT, MockMvc",
+          "Spring Blog",
+          "Postman API Platform",
+          "Heroku Dev Center",
+          "AWS Docs"
+        ]
+      }
+    ]
+  }
+]

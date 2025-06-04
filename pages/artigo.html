@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artigo • TechBlog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style/style.css" />
+  <link rel="stylesheet" href="../style/artigos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <h1>TechBlog</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="#">Blog</a>
+      <a href="#">Categorias</a>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
+
+  <main class="artigo-container">
+    <div id="conteudo-artigo">Carregando artigo...</div>
+    <a class="back-link" href="../index.html">← Voltar para a página inicial</a>
+  </main>
+
+  <script>
+    const slug = new URLSearchParams(window.location.search).get("slug");
+
+    console.log("Carregando artigo com slug:", slug);
+
+    fetch("../artigos.json")
+      .then(res => res.json())
+      .then(artigos => {
+        const artigo = artigos.find(a => a.slug === slug);
+        const container = document.getElementById("conteudo-artigo");
+        container.innerHTML = "";
+
+        if (!artigo) {
+          container.innerHTML = `<p>Artigo com slug <strong>${slug}</strong> não encontrado.</p>`;
+          return;
+        }
+
+        const referenciasAcumuladas = [];
+
+        artigo.conteudo.forEach(item => {
+          let el;
+
+          switch (item.tipo) {
+            case "titulo":
+              el = document.createElement("h1");
+              el.textContent = item.texto;
+              container.appendChild(el);
+              break;
+
+            case "subtitulo":
+              el = document.createElement("h2");
+              el.textContent = item.texto;
+              container.appendChild(el);
+              break;
+
+            case "paragrafo":
+              el = document.createElement("p");
+              el.textContent = item.texto;
+              container.appendChild(el);
+              break;
+
+            case "lista":
+              el = document.createElement("ul");
+              item.itens.forEach(texto => {
+                const li = document.createElement("li");
+                li.textContent = texto;
+                el.appendChild(li);
+              });
+              container.appendChild(el);
+              break;
+
+            case "referencias":
+              referenciasAcumuladas.push(...item.itens);
+              break;
+          }
+        });
+
+        // Exibir as referências no final
+        if (referenciasAcumuladas.length > 0) {
+          const refTitle = document.createElement("h2");
+          refTitle.textContent = "Referências";
+          container.appendChild(refTitle);
+
+          const ul = document.createElement("ul");
+          referenciasAcumuladas.forEach(ref => {
+            const li = document.createElement("li");
+            li.textContent = ref;
+            ul.appendChild(li);
+          });
+
+          container.appendChild(ul);
+        }
+      })
+      .catch(err => {
+        document.getElementById("conteudo-artigo").innerHTML = "<p>Erro ao carregar o artigo.</p>";
+        console.error(err);
+      });
+  </script>
+
+  <footer>
+    <div class="container-footer">
+      <p>© 2025 TechBlog. Todos os direitos reservados.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
