@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Artigo • TechBlog</title>
+  <title>Artigo • SIF Blog</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../style/style.css" />
   <link rel="stylesheet" href="../style/artigos.css" />
@@ -13,7 +13,7 @@
 
 <body>
   <header>
-    <h1>TechBlog</h1>
+    <h1>SIF Blog</h1>
     <nav>
       <a href="../index.html">Home</a>
       <a href="#">Blog</a>
@@ -59,6 +59,13 @@
 
             case "subtitulo":
               el = document.createElement("h2");
+              el.textContent = item.texto;
+              container.appendChild(el);
+              break;
+
+            case "subtopico":
+              el = document.createElement("h3");
+              el.classList.add("subtopico");
               el.textContent = item.texto;
               container.appendChild(el);
               break;
@@ -109,7 +116,7 @@
 
   <footer>
     <div class="container-footer">
-      <p>© 2025 TechBlog. Todos os direitos reservados.</p>
+      <p>© 2025 SIF Blog. Todos os direitos reservados.</p>
       <div class="social-icons">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>

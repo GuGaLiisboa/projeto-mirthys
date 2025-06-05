@@ -191,7 +191,7 @@
       },
       {
         "tipo": "paragrafo",
-        "texto": "O REST é um estilo arquitetural que define quatro restrições principais (cliente-servidor, sem estado, cache, sistema em camadas) para garantir escalabilidade e simplicidade em sistemas distribuídos roy.gbiv.com. Em REST, recursos são abstrações que representam dados (por exemplo, “usuários” ou “pedidos”) e são identificados por URIs únicas, enquanto as operações são realizadas via métodos HTTP (GET, POST, PUT, DELETE) roy.gbiv.com."
+        "texto": "O REST é um estilo arquitetural que define quatro restrições principais (cliente-servidor, sem estado, cache, sistema em camadas) para garantir escalabilidade e simplicidade em sistemas distribuídos. Em REST, recursos são abstrações que representam dados (por exemplo, “usuários” ou “pedidos”) e são identificados por URIs únicas, enquanto as operações são realizadas via métodos HTTP (GET, POST, PUT, DELETE)."
       },
       {
         "tipo": "paragrafo",
@@ -203,20 +203,24 @@
       },
       {
         "tipo": "paragrafo",
-        "texto": "O Spring Initializr permite gerar projetos com dependências como Spring Web, Data JPA, Security e Swagger."
+        "texto": "O Spring Initializr oferece uma interface web e API REST para gerar rapidamente projetos Spring Boot pré-configurados. Basta escolher:"
       },
       {
         "tipo": "lista",
         "itens": [
-          "Projeto: Maven",
-          "Linguagem: Java",
-          "Versão do Spring Boot: última estável",
+          "Projeto: Maven (facilita integração com repositórios de artefatos)",
+          "Linguagem: Java (ampla adoção em empresas e ecossistema maduro)",
+          "Versão do Spring Boot: selecione a última estável para obter correções e novos recursos sem sacrificar estabilidade",
           "Dependências: Spring Web, Spring Data JPA, Spring Security, Springdoc OpenAPI"
         ]
       },
       {
         "tipo": "subtitulo",
         "texto": "3. CRUD com Spring Data JPA"
+      },
+      {
+        "tipo": "subtopico",
+        "texto": "3.1 Definindo a Entidade"
       },
       {
         "tipo": "paragrafo",

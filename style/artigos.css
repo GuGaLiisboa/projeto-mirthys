@@ -16,6 +16,13 @@
   margin-bottom: 10px;
 }
 
+.artigo-container h3 {
+  font-size: 1.4rem;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
 .artigo-container p {
   color: #ccc;
   margin-bottom: 1rem;
