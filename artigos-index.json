@@ -1,0 +1,83 @@
+[
+  {
+    "titulo": "Guia Completo para Construção de uma API RESTful com Spring Boot",
+    "slug": "api-rest-spring-bot",
+    "descricao": "Aprenda como desenvolver, documentar, testar, proteger e fazer deploy de APIs RESTful...",
+    "categoria": "Back-end",
+    "tempo": "18 min",
+    "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/apirest.webp",
+    "data": "2025-06-10"
+  },
+  {
+    "titulo": "Arquitetura e Organização dos Computadores",
+    "slug": "arquitetura-computadores",
+    "descricao": "Entenda os princípios básicos da arquitetura e organização de computadores...",
+    "categoria": "Fundamentos",
+    "tempo": "12 min",
+    "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/arquitetura.jpeg",
+    "data": "2025-06-05"
+  },
+  {
+    "titulo": "Introdução às Redes de Computadores",
+    "slug": "introducao-as-redes-de-computadores",
+    "descricao": "Uma introdução aos conceitos essenciais de redes, cobrindo tipos de redes (LAN, WAN), topologias, modelo OSI, protocolos de comunicação e noções de segurança.",
+    "categoria": "Fundamentos",
+    "tempo": "6 min",
+    "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/redes.jpg",
+    "data": "2025-06-10"
+  },
+  {
+    "titulo": "Segurança em Aplicações Web: Ameaças e Boas Práticas",
+    "slug": "seguranca-aplicacoes-web",
+    "descricao": "Um guia abrangente sobre segurança web, detalhando as principais ameaças como SQL Injection, XSS e CSRF, além de apresentar boas práticas e ferramentas essenciais.",
+    "categoria": "Segurança",
+    "tempo": "12 min",
+    "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/segurancaweb.webp",
+    "data": "2025-06-10"
+  },
+  {
+    "titulo": "Aplicações com Flutter: Preparação de Ambiente e Fundamentos",
+    "slug": "aplicacoes-flutter-preparacao-ambiente-e-fundamentos",
+    "descricao": "Um guia sobre como preparar um ambiente de desenvolvimento agnóstico para Flutter e dominar seus conceitos fundamentais, visando a autonomia e a criação de apps robustos.",
+    "categoria": "Mobile",
+    "tempo": "5 min",
+    "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/flutter.png",
+    "data": "2025-06-11"
+  },
+  {
+    "titulo": "Análise de Dados e Ferramentas de BI: Descobrindo o Poder por Trás dos Números",
+    "slug": "analise-de-dados-e-ferramentas-de-bi-descobrindo-o-poder-dos-numeros",
+    "descricao": "Uma introdução à análise de dados e Business Intelligence, explicando o que são, quais as principais ferramentas (Power BI, Tableau) e como transformar números em decisões estratégicas.",
+    "categoria": "Dados",
+    "tempo": "5 min",
+    "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/powerbi2.jpg",
+    "data": "2025-06-11"
+  },
+  {
+    "titulo": "DevOps e Infraestrutura como Código (IaC)",
+    "slug": "devops-e-infraestrutura-como-codigo-iac",
+    "descricao": "Uma exploração dos conceitos de DevOps e IaC, abordando seus princípios, ferramentas como Terraform e CloudFormation, práticas de segurança e as principais tendências do setor.",
+    "categoria": "Back-end",
+    "tempo": "7 min",
+    "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/devops.jpeg",
+    "data": "2025-06-10"
+  },
+  {
+    "titulo": "Guia Completo sobre Metodologias Ágeis: Scrum e Kanban",
+    "slug": "guia-completo-metodologias-ageis-scrum-e-kanban",
+    "descricao": "Uma exploração detalhada das metodologias ágeis, com foco em Scrum e Kanban. Entenda seus papéis, cerimônias, benefícios e as principais diferenças para escolher a melhor abordagem para seus projetos.",
+    "categoria": "Gestão de Projetos",
+    "tempo": "10 min",
+    "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/scrum1.png",
+    "data": "2025-06-10"
+  },
+  {
+    "titulo": "Desvendando a Nuvem: Modelos de Serviço e os Gigantes do Mercado",
+    "slug": "desvendando-a-nuvem-modelos-de-servico-e-os-gigantes-do-mercado",
+    "descricao": "Uma introdução completa à Computação em Nuvem, explicando os modelos de serviço IaaS, PaaS e SaaS e apresentando os principais provedores do mercado: AWS, Azure e Google Cloud.",
+    "categoria": "Fundamentos",
+    "tempo": "9 min",
+    "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/cloud.webp",
+    "data": "2025-05-24"
+  }
+]

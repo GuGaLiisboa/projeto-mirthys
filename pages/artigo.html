@@ -13,69 +13,53 @@
 
 <body>
   <header>
-    <h1>SIF Blog</h1>
+    <h1><a href="../index.html">SIF Blog</a></h1>
     <nav>
       <a href="../index.html">Home</a>
-      <a href="#">Blog</a>
       <a href="#">Categorias</a>
       <a href="#">Sobre</a>
-      <a href="#">Contato</a>
     </nav>
   </header>
 
   <main class="artigo-container">
-    <div id="conteudo-artigo">Carregando artigo...</div>
-    <a class="back-link" href="../index.html">← Voltar para a página inicial</a>
+    <div id="conteudo-artigo"></div>
   </main>
 
   <script>
     const slug = new URLSearchParams(window.location.search).get("slug");
+    const container = document.getElementById("conteudo-artigo");
 
-    console.log("Carregando artigo com slug:", slug);
+    if (!slug) {
+      container.innerHTML = "<p>Slug não informado.</p>";
+      throw new Error("Slug ausente na URL");
+    }
 
-    fetch("../artigos.json")
-      .then(res => res.json())
-      .then(artigos => {
-        const artigo = artigos.find(a => a.slug === slug);
-        const container = document.getElementById("conteudo-artigo");
-        container.innerHTML = "";
-
-        if (!artigo) {
-          container.innerHTML = `<p>Artigo com slug <strong>${slug}</strong> não encontrado.</p>`;
-          return;
+    fetch(`../data/artigos/${slug}.json`)
+      .then(res => {
+        if (!res.ok) {
+          throw new Error("Artigo não encontrado");
         }
+        return res.json();
+      })
+      .then(data => {
+        const referencias = [];
 
-        const referenciasAcumuladas = [];
-
-        artigo.conteudo.forEach(item => {
+        data.conteudo.forEach(item => {
           let el;
-
           switch (item.tipo) {
             case "titulo":
               el = document.createElement("h1");
-              el.textContent = item.texto;
-              container.appendChild(el);
               break;
-
             case "subtitulo":
               el = document.createElement("h2");
-              el.textContent = item.texto;
-              container.appendChild(el);
               break;
-
             case "subtopico":
               el = document.createElement("h3");
-              el.classList.add("subtopico");
-              el.textContent = item.texto;
-              container.appendChild(el);
+              el.style.marginTop = "20px";
               break;
-
             case "paragrafo":
               el = document.createElement("p");
-              el.textContent = item.texto;
-              container.appendChild(el);
               break;
-
             case "lista":
               el = document.createElement("ul");
               item.itens.forEach(texto => {
@@ -83,36 +67,45 @@
                 li.textContent = texto;
                 el.appendChild(li);
               });
-              container.appendChild(el);
               break;
-
+            case "imagem":
+              el = document.createElement("img");
+              el.src = item.src;
+              el.alt = item.alt || "";
+              el.style.maxWidth = "100%";
+              el.style.margin = "20px 0";
+              break;
             case "referencias":
-              referenciasAcumuladas.push(...item.itens);
-              break;
+              referencias.push(...item.itens);
+              return; // pula o append aqui, será feito no final
           }
+
+          if (item.tipo !== "lista" && item.tipo !== "referencias") {
+            el.textContent = item.texto;
+          }
+
+          container.appendChild(el);
         });
 
-        // Exibir as referências no final
-        if (referenciasAcumuladas.length > 0) {
+        if (referencias.length > 0) {
           const refTitle = document.createElement("h2");
           refTitle.textContent = "Referências";
           container.appendChild(refTitle);
 
           const ul = document.createElement("ul");
-          referenciasAcumuladas.forEach(ref => {
+          referencias.forEach(texto => {
             const li = document.createElement("li");
-            li.textContent = ref;
+            li.textContent = texto;
             ul.appendChild(li);
           });
-
           container.appendChild(ul);
         }
       })
       .catch(err => {
-        document.getElementById("conteudo-artigo").innerHTML = "<p>Erro ao carregar o artigo.</p>";
-        console.error(err);
+        container.innerHTML = `<p>Erro ao carregar o artigo: ${err.message}</p>`;
       });
   </script>
+
 
   <footer>
     <div class="container-footer">

@@ -1,0 +1,446 @@
+{
+  "conteudo": [
+    {
+      "tipo": "titulo",
+      "texto": "O que é Segurança em Aplicações Web?"
+    },
+    {
+      "tipo": "imagem",
+      "src": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/segurancaweb.webp",
+      "alt": "Imagem representativa de redes de computadores"
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "1. Introdução"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Segurança em Aplicações Web é o conjunto de práticas, técnicas e ferramentas voltadas à proteção de sistemas acessíveis via internet — como sites, plataformas, e-commerces, portais de serviços e APIs — contra acessos não autorizados, vazamento de dados, ataques cibernéticos e interrupções no funcionamento."
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "Por que a segurança em aplicações web é essencial?"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Atualmente, utilizamos aplicações web para atividades críticas como transações bancárias, compras online, envio de dados pessoais, trabalho remoto e comunicação. Isso torna essas aplicações alvos atrativos para atacantes que buscam explorar vulnerabilidades. Sem medidas de segurança adequadas, uma aplicação pode estar sujeita a:"
+    },
+    {
+      "tipo": "lista",
+      "itens": [
+        "Vazamento de informações sensíveis: como senhas, números de cartão de crédito, documentos pessoais e registros médicos.",
+        "Invasão de contas e sistemas: permitindo que atacantes assumam identidades ou acessem dados restritos.",
+        "Prejuízos financeiros e danos à reputação: afetando a confiança dos usuários e a imagem da organização.",
+        "Interrupções no serviço: como em ataques de negação de serviço (DDoS), que tornam o sistema indisponível."
+      ]
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "Objetivos Fundamentais da Segurança em Aplicações Web"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "A segurança da informação em aplicações web é baseada em três pilares principais, conhecidos como Tríade CIA:"
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "Confidencialidade"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Assegura que apenas pessoas autorizadas tenham acesso a informações sensíveis. Exemplo: Somente o titular de uma conta bancária pode visualizar seu extrato ou realizar transferências."
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "Integridade"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Garante que os dados não sejam alterados de forma indevida, seja por erro, falha ou ação maliciosa. Exemplo: Impedir que um invasor modifique o valor de uma compra em uma loja virtual após o checkout."
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "Disponibilidade"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Assegura que os sistemas e serviços estejam sempre acessíveis e operacionais, mesmo sob ataques ou falhas técnicas. Exemplo: O sistema de agendamento de um hospital deve estar online 24/7 para emergências e consultas médicas."
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "2. Tipos de Ameaças"
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "SQL Injection"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Um ataque de injeção de SQL consiste na inserção ou \"injeção\" de uma consulta SQL por meio dos dados de entrada fornecidos pelo cliente à aplicação. Uma exploração bem-sucedida de injeção de SQL pode ler dados confidenciais do banco de dados, modificar dados (inserir/atualizar/excluir), executar operações administrativas no banco de dados (como desligar o SGBD), recuperar o conteúdo de um determinado arquivo presente no sistema de arquivos do SGBD e, em alguns casos, emitir comandos para o sistema operacional. Ataques de injeção de SQL são um tipo de ataque de injeção, no qual comandos SQL são inseridos em entradas de dados para afetar a execução de comandos SQL predefinidos."
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "Modelagem de Ameaças"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Os ataques de injeção de SQL permitem que invasores:"
+    },
+    {
+      "tipo": "lista",
+      "itens": [
+        "Falsifiquem identidades;",
+        "Manipulem dados existentes;",
+        "Causam problemas de repúdio, como o cancelamento de transações ou a alteração de saldos;",
+        "Divulguem completamente todos os dados do sistema;",
+        "Destruam os dados ou os tornem inacessíveis;",
+        "Assumam o controle administrativo do servidor de banco de dados."
+      ]
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "A injeção de SQL é muito comum em aplicações PHP e ASP devido à prevalência de interfaces funcionais mais antigas. Já aplicações baseadas em J2EE e ASP.NET são, em geral, menos suscetíveis a injeções de SQL exploráveis com facilidade, devido à natureza das interfaces programáticas utilizadas."
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "A gravidade dos ataques de injeção de SQL é limitada principalmente pela habilidade e criatividade do atacante e, em menor grau, pelas contramedidas de segurança em profundidade, como o uso de conexões com privilégios reduzidos ao servidor de banco de dados. De forma geral, a injeção de SQL deve ser considerada uma ameaça de alta severidade."
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "Descrição"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Um ataque de injeção de SQL ocorre quando:"
+    },
+    {
+        "tipo": "lista",
+        "itens": [
+            "Um dado não intencional entra em um programa a partir de uma fonte não confiável;",
+            "Esse dado é utilizado para construir dinamicamente uma consulta SQL."
+        ]
+    },
+    {
+        "tipo": "subtopico",
+        "texto": "Principais Consequências"
+    },
+    {
+        "tipo": "lista",
+        "itens": [
+            "Confidencialidade: Como os bancos de dados SQL geralmente armazenam informações sensíveis, a quebra de confidencialidade é um problema frequente associado a vulnerabilidades de injeção de SQL.",
+            "Autenticação: Se comandos SQL mal projetados forem utilizados para verificar nomes de usuários e senhas, pode ser possível acessar o sistema como outro usuário, mesmo sem conhecimento prévio da senha.",
+            "Autorização: Caso as informações de autorização estejam armazenadas no banco de dados SQL, pode ser possível alterar essas informações por meio da exploração bem-sucedida de uma injeção de SQL.",
+            "Integridade: Assim como é possível ler dados sensíveis, também é possível alterar ou até mesmo excluir essas informações por meio de um ataque de injeção de SQL."
+        ]
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "Cross-Site Scripting (XSS)"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Os ataques de Cross-Site Scripting (XSS) são um tipo de injeção, no qual scripts maliciosos são injetados em sites aparentemente benignos e confiáveis. Esses ataques ocorrem quando um invasor utiliza uma aplicação web para enviar código malicioso — geralmente na forma de um script executado no navegador — para outro usuário final."
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "As falhas que permitem esses ataques são bastante comuns e ocorrem sempre que uma aplicação web utiliza dados fornecidos pelo usuário na saída gerada, sem validá-los ou codificá-los adequadamente."
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Um invasor pode usar XSS para enviar um script malicioso a um usuário desavisado. O navegador do usuário não tem como saber que o script não é confiável e, portanto, o executará. Como o navegador acredita que o script veio de uma fonte confiável, o script malicioso pode acessar cookies, tokens de sessão ou outras informações sensíveis armazenadas no navegador e utilizadas com aquele site. Esses scripts podem até mesmo reescrever o conteúdo da página HTML."
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "Descrição"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Os ataques de Cross-Site Scripting (XSS) ocorrem quando:"
+    },
+    {
+      "tipo": "lista",
+      "itens": [
+          "Dados entram em uma aplicação web a partir de uma fonte não confiável, geralmente por meio de uma requisição web.",
+          "Esses dados são incluídos em conteúdo dinâmico enviado para o navegador do usuário sem validação contra conteúdo malicioso."
+      ]
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "O conteúdo malicioso geralmente é um trecho de JavaScript, mas também pode incluir HTML, Flash ou qualquer outro código que o navegador possa executar. A variedade de ataques com base em XSS é praticamente ilimitada, mas normalmente envolve:"
+    },
+    {
+      "tipo": "lista",
+      "itens": [
+        "Transmissão de dados privados, como cookies ou tokens de sessão, para o atacante;",
+        "Redirecionamento da vítima para conteúdo web controlado pelo atacante;",
+        "Execução de operações maliciosas na máquina do usuário disfarçadas como ações legítimas do site."
+      ]
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "Tipos de Ataques XSS: Refletido e Armazenado"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Os ataques XSS geralmente se enquadram em duas categorias: Refletido e Armazenado. Existe também um terceiro tipo, menos conhecido, chamado XSS Baseado em DOM (DOM Based XSS), discutido separadamente."
+    },
+    {
+        "tipo": "subtopico",
+        "texto": "XSS Refletido (Reflected XSS)"
+    },
+    {
+        "tipo": "paragrafo",
+        "texto": "São aqueles onde o script injetado é refletido de volta pelo servidor web, como em mensagens de erro, resultados de busca ou qualquer resposta que inclua dados enviados pelo usuário. São entregues à vítima por meios externos, como e-mails ou outros sites. Quando o usuário clica em um link malicioso, envia um formulário manipulado ou apenas visita um site malicioso, o código injetado é enviado ao site vulnerável, que o reflete de volta ao navegador do usuário — o qual executa o código por considerar que veio de um servidor confiável. Também conhecido como XSS Não Persistente ou Tipo I."
+    },
+    {
+        "tipo": "subtopico",
+        "texto": "XSS Armazenado (Stored XSS)"
+    },
+    {
+        "tipo": "paragrafo",
+        "texto": "Neste tipo de ataque, o script malicioso é armazenado permanentemente nos servidores do alvo, como em bancos de dados, fóruns, logs de visitantes ou campos de comentários. O usuário acessa o script ao visualizar os dados armazenados. Também chamado de XSS Persistente ou Tipo II."
+    },
+    {
+        "tipo": "subtopico",
+        "texto": "XSS Cego (Blind XSS)"
+    },
+    {
+        "tipo": "paragrafo",
+        "texto": "É uma forma de XSS persistente. Ocorre quando o código malicioso é salvo no servidor, mas não é refletido imediatamente ao atacante — em vez disso, ele é executado quando um usuário da aplicação backend (como um administrador) visualiza o conteúdo. Um exemplo seria um formulário de feedback. Para detectar esse tipo de XSS, ferramentas como XSS Hunter são úteis."
+    },
+    {
+        "tipo": "subtopico",
+        "texto": "Outros Tipos de Vulnerabilidades XSS"
+    },
+    {
+        "tipo": "paragrafo",
+        "texto": "Além do Armazenado e Refletido, o XSS Baseado em DOM (identificado por Amit Klein em 2005) também é importante. A OWASP recomenda classificar os tipos de XSS com base em uma matriz de: Armazenado vs. Refletido, Lado do Servidor vs. Lado do Cliente (DOM). O DOM Based XSS é um subconjunto do XSS do lado do cliente."
+    },
+    {
+        "tipo": "subtopico",
+        "texto": "Consequências de um Ataque XSS"
+    },
+    {
+        "tipo": "paragrafo",
+        "texto": "As consequências de um ataque XSS são semelhantes, independentemente do tipo (Refletido, Armazenado ou DOM Based). A principal diferença está na forma como o código malicioso chega ao navegador da vítima. Mesmo sites “somente leitura” ou institucionais (\"brochureware\") podem estar vulneráveis a ataques XSS sérios. Consequências incluem:"
+    },
+    {
+        "tipo": "lista",
+        "itens": [
+            "Roubo de cookies de sessão, permitindo o sequestro de sessões e invasão de contas;",
+            "Acesso a arquivos do usuário final;",
+            "Instalação de trojans;",
+            "Redirecionamento para outros sites maliciosos;",
+            "Modificação de conteúdo da página. Exemplo: alteração de uma notícia pode afetar o valor das ações de uma empresa ou minar a confiança do consumidor. Em sites farmacêuticos, um XSS poderia modificar informações de dosagem, levando a uma overdose."
+        ]
+    },
+    {
+        "tipo": "subtopico",
+        "texto": "Como Saber se Você Está Vulnerável"
+    },
+    {
+        "tipo": "paragrafo",
+        "texto": "Vulnerabilidades XSS são difíceis de identificar e corrigir. A melhor forma é:"
+    },
+    {
+        "tipo": "lista",
+        "itens": [
+            "Revisar o código-fonte e identificar todos os locais onde dados de requisições HTTP entram na saída HTML;",
+            "Ferramentas como Nessus, Nikto, entre outras, ajudam a escanear vulnerabilidades XSS, mas detectam apenas a superfície do problema;",
+            "Se uma parte do site é vulnerável, é provável que outras também sejam."
+        ]
+    },
+    {
+        "tipo": "subtopico",
+        "texto": "Como se Proteger"
+    },
+    {
+        "tipo": "paragrafo",
+        "texto": "As principais defesas contra XSS estão descritas no OWASP XSS Prevention Cheat Sheet. Algumas medidas fundamentais incluem:"
+    },
+    {
+        "tipo": "lista",
+        "itens": [
+            "Desativar o suporte ao método HTTP TRACE em todos os servidores web. Um atacante pode usar JavaScript para roubar cookies mesmo com document.cookie desativado. Esse tipo de ataque pode usar uma requisição TRACE para capturar dados e enviá-los a um servidor malicioso.",
+            "Utilizar bibliotecas de segurança como o projeto OWASP ESAPI, que fornece componentes reutilizáveis para validação e escape de dados.",
+            "Estudar e praticar com o OWASP WebGoat, que contém lições práticas sobre XSS e codificação segura de dados."
+        ]
+    },
+    {
+        "tipo": "subtopico",
+        "texto": "Cross-Site Request Forgery (CSRF)"
+    },
+    {
+        "tipo": "paragrafo",
+        "texto": "Cross-Site Request Forgery (CSRF) é um ataque que força um usuário final a executar ações indesejadas em uma aplicação web na qual ele já está autenticado. Com a ajuda de engenharia social (como o envio de um link por e-mail ou chat), um atacante pode enganar os usuários de uma aplicação web para que executem ações escolhidas pelo atacante."
+    },
+    {
+        "tipo": "paragrafo",
+        "texto": "Se a vítima for um usuário comum, um ataque CSRF bem-sucedido pode forçá-lo a realizar requisições que alteram o estado da aplicação, como:"
+    },
+    {
+        "tipo": "lista",
+        "itens": [
+            "Transferir fundos;",
+            "Alterar o endereço de e-mail;",
+            "Entre outras ações sensíveis."
+        ]
+    },
+    {
+        "tipo": "paragrafo",
+        "texto": "Se a vítima for um usuário com conta administrativa, um ataque CSRF pode comprometer toda a aplicação web."
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "3. Boas Práticas de Segurança"
+    },
+    {
+        "tipo": "subtopico",
+        "texto": "Validação e Saneamento de Dados"
+    },
+    {
+        "tipo": "paragrafo",
+        "texto": "Uma aplicação está vulnerável a ataques quando: Dados fornecidos pelo usuário não são validados, filtrados ou sanitizados pela aplicação; Consultas dinâmicas ou chamadas não parametrizadas sem escapamento contextual são utilizadas diretamente no interpretador; Dados maliciosos são usados em parâmetros de busca do ORM (Object-Relational Mapping) para extrair registros adicionais e sensíveis; Dados maliciosos são usados diretamente ou concatenados, de forma que o SQL ou comando contenha tanto a estrutura quanto os dados maliciosos em consultas dinâmicas, comandos ou procedimentos armazenados."
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "Autenticação e Controle de Acesso"
+    },
+    {
+        "tipo": "paragrafo",
+        "texto": "A confirmação da identidade do usuário, a autenticação e o gerenciamento de sessão são críticos para proteger contra ataques relacionados à autenticação. A aplicação pode apresentar fraquezas de autenticação se: Permite ataques automatizados como credential stuffing; Permite ataques de força bruta; Permite o uso de senhas padrão ou fracas; Utiliza processos fracos de recuperação de credenciais; Armazena senhas em texto simples ou com hash fraco; Não utiliza autenticação multifator; Expõe IDs de sessão na URL; Não altera o ID de sessão após login; Não invalida adequadamente os IDs de sessão."
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "Criptografia"
+    },
+    {
+        "tipo": "paragrafo",
+        "texto": "O primeiro passo é determinar as necessidades de proteção dos dados em trânsito e em repouso. É preciso verificar se algum dado é transmitido em texto claro, se algoritmos criptográficos antigos ou fracos estão sendo utilizados, se as chaves são fracas ou reutilizadas, se a criptografia não é forçada e se o certificado do servidor é validado. Para prevenir, classifique os dados, não armazene dados sensíveis desnecessariamente, criptografe dados em repouso e em trânsito com protocolos fortes (como TLS com PFS), desabilite o cache para dados sensíveis e armazene senhas com hashes fortes como Argon2 ou bcrypt."
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "4. Ferramentas de Testes de Segurança em Aplicações Web"
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "Burp Suite"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "O Burp Suite é uma plataforma integrada para testes de segurança em aplicações web, amplamente utilizada por profissionais da área. Oferece tanto ferramentas manuais quanto automatizadas."
+    },
+    {
+        "tipo": "lista",
+        "itens": [
+            "Scanner: Detecta automaticamente vulnerabilidades conhecidas.",
+            "Proxy: Intercepta e modifica requisições HTTP/S entre o navegador e o servidor.",
+            "Intruder: Permite a realização de ataques automatizados, como fuzzing ou brute force.",
+            "Repeater, Decoder e Comparer: Ferramentas auxiliares para testes personalizados."
+        ]
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "OWASP ZAP (Zed Attack Proxy)"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "O OWASP ZAP é uma ferramenta gratuita e de código aberto, ideal para desenvolvedores e testadores de segurança com diferentes níveis de experiência."
+    },
+    {
+        "tipo": "lista",
+        "itens": [
+            "Scan Automático: Detecta vulnerabilidades como XSS, CSRF, e Injeção de SQL.",
+            "Interceptação de Requisições: Permite analisar e modificar requisições e respostas HTTP/S.",
+            "Gerador de Relatórios: Gera relatórios completos das vulnerabilidades encontradas.",
+            "Suporte a scripts personalizados e integração com pipelines DevSecOps."
+        ]
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "Nessus"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "O Nessus é um dos scanners de vulnerabilidades mais confiáveis e amplamente utilizados no mundo. É voltado principalmente para avaliação de segurança em redes e sistemas."
+    },
+    {
+        "tipo": "lista",
+        "itens": [
+            "Detecção de Vulnerabilidades Conhecidas: Em sistemas operacionais, bancos de dados e aplicações.",
+            "Avaliação de Configuração: Verifica práticas incorretas de configuração.",
+            "Relatórios Personalizados: Prioriza riscos com base em severidade e contexto organizacional."
+        ]
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "Acunetix"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "O Acunetix é uma ferramenta comercial que realiza varreduras automatizadas em aplicações web com alto nível de precisão."
+    },
+    {
+        "tipo": "lista",
+        "itens": [
+            "Detecção de Vulnerabilidades Críticas: Como SQL Injection, Cross-Site Scripting (XSS), LFI/RFI.",
+            "Cobertura de SPAs (Single Page Applications): Com suporte a frameworks modernos como React, Angular, Vue.js.",
+            "Relatórios Detalhados e Técnicos: Inclui sugestões práticas para correção.",
+            "Integração com CI/CD: Para uso em ambientes de desenvolvimento contínuo."
+        ]
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "Nikto"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "O Nikto é uma ferramenta de linha de comando que realiza varreduras rápidas em servidores web, buscando falhas comuns e arquivos inseguros."
+    },
+    {
+        "tipo": "lista",
+        "itens": [
+            "Varredura Abrangente: Verifica mais de 6.700 arquivos/CGIs perigosos e configurações inseguras.",
+            "Detecção de Cabeçalhos HTTP ausentes/inseguros, problemas de SSL e banners do servidor.",
+            "Leve e Rápido: Ideal para varreduras iniciais ou integradas a scripts de automação."
+        ]
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "5. OWASP Top 10"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "A OWASP (Open Worldwide Application Security Project) é uma organização que cria guias de segurança. Seu principal projeto é o Top 10, uma lista com as 10 maiores falhas em aplicações web, atualizada regularmente."
+    },
+    {
+      "tipo": "lista",
+      "itens": [
+        "Broken Access Control – Controle de acesso mal implementado.",
+        "Cryptographic Failures – Falhas em criptografia de dados.",
+        "Injection – Como SQL Injection.",
+        "Insecure Design – Arquitetura do sistema insegura.",
+        "Security Misconfiguration – Configuração errada do servidor/sistema.",
+        "Vulnerable and Outdated Components – Uso de bibliotecas desatualizadas.",
+        "Identification and Authentication Failures – Problemas com login e sessões.",
+        "Software and Data Integrity Failures",
+        "Security Logging and Monitoring Failures",
+        "Server-Side Request Forgery (SSRF) – Manipulação de requisições no servidor."
+      ]
+    },
+    {
+      "tipo": "referencias",
+      "itens": [
+        "NIST – National Institute of Standards and Technology. https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "OWASP Top 10 - https://blog.aldeia-viva.com.br/posts/web-app-testing/?utm_source=chatgpt.com",
+        "SQL Injection - https://owasp.org/www-community/attacks/SQL_Injection#",
+        "Cross Site Scripting (XSS) - https://owasp.org/www-community/attacks/xss/",
+        "Cross Site Request Forgery - https://owasp.org/www-community/attacks/csrf",
+        "Validação de Entrada - https://owasp.org/www-project-top-ten/2017/A1_2017-Injection",
+        "Autenticação e Controle de Acesso - https://owasp.org/www-project-top-ten/2017/A2_2017-Broken_Authentication",
+        "Criptografia - https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure",
+        "Ferramentas de Segurança - https://github.com/sullo/nikto, https://www.acunetix.com, https://www.tenable.com/products/nessus, https://www.zaproxy.org, https://portswigger.net/burp"
+      ]
+    }
+  ]
+}

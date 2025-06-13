@@ -1,0 +1,254 @@
+{
+  "conteudo": [
+    {
+      "tipo": "titulo",
+      "texto": "Introdução às Redes de Computadores"
+    },
+    {
+      "tipo": "imagem",
+      "src": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/redes.jpg",
+      "alt": "Imagem representativa de redes de computadores"
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "Introdução"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "As redes de computadores são uma das bases da comunicação moderna. Desde o envio de mensagens até o uso de serviços em nuvem, tudo depende da interligação eficiente entre dispositivos. Este artigo apresenta uma introdução aos principais conceitos das redes de computadores, com o objetivo de oferecer uma visão geral para iniciantes na área."
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "O que é uma Rede de Computadores?"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Uma rede de computadores é um conjunto de dispositivos interligados que compartilham dados e recursos entre si. Essa conexão permite comunicação rápida, acesso a arquivos, uso compartilhado de impressoras, acesso à internet, entre outros."
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "Tipos de Redes"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "As redes podem ser classificadas de acordo com sua abrangência:"
+    },
+    {
+      "tipo": "lista",
+      "itens": [
+        "LAN (Local Area Network): rede local, geralmente dentro de um edifício.",
+        "MAN (Metropolitan Area Network): rede metropolitana, cobre áreas urbanas.",
+        "WAN (Wide Area Network): rede de longa distância, conecta cidades, países ou continentes.",
+        "PAN (Personal Area Network): rede pessoal, geralmente entre dispositivos próximos, como Bluetooth."
+      ]
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "Topologias de Rede"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Topologia refere-se à forma como os dispositivos estão organizados fisicamente ou logicamente. As mais comuns são:"
+    },
+    {
+      "tipo": "lista",
+      "itens": [
+        "Barramento: todos os dispositivos compartilham um único cabo.",
+        "Estrela: dispositivos conectados a um ponto central (geralmente um switch).",
+        "Anel: os dispositivos formam um círculo e os dados circulam em uma direção.",
+        "Malha: cada dispositivo se conecta a vários outros, garantindo redundância.",
+        "Híbrida: combinação de duas ou mais topologias."
+      ]
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "5. Dispositivos de Rede"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Para que uma rede funcione, diversos dispositivos são utilizados:"
+    },
+    {
+      "tipo": "lista",
+      "itens": [
+        "Roteador: direciona pacotes entre redes diferentes (ex: internet).",
+        "Switch: conecta dispositivos dentro de uma mesma rede local.",
+        "Hub: semelhante ao switch, mas menos eficiente (obsoleto em muitas redes).",
+        "Modem: converte sinais digitais em analógicos e vice-versa.",
+        "Access Point: permite a conexão de dispositivos sem fio à rede."
+      ]
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "6. Modelo OSI"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "O modelo OSI (Open Systems Interconnection) é um padrão que divide a comunicação de rede em sete camadas:"
+    },
+    {
+      "tipo": "lista",
+      "itens": [
+        "1. Física",
+        "2. Enlace de dados",
+        "3. Rede",
+        "4. Transporte",
+        "5. Sessão",
+        "6. Apresentação",
+        "7. Aplicação"
+      ]
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Esse modelo facilita a padronização e o entendimento de como os dados trafegam pela rede."
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "7. Protocolos de Comunicação"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Protocolos são conjuntos de regras que determinam como os dados são transmitidos. Alguns exemplos:"
+    },
+    {
+      "tipo": "lista",
+      "itens": [
+        "TCP/IP: base da comunicação na internet.",
+        "HTTP/HTTPS: usados na navegação de sites.",
+        "FTP: transferência de arquivos.",
+        "DNS: tradução de nomes de domínio em endereços IP.",
+        "DHCP: atribuição automática de endereços IP."
+      ]
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "8. Endereçamento IP"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Todo dispositivo em uma rede precisa de um endereço IP. Os dois principais formatos são:"
+    },
+    {
+      "tipo": "lista",
+      "itens": [
+        "IPv4: mais comum, com 32 bits (ex: 192.168.0.1).",
+        "IPv6: mais recente, com 128 bits, criado para suportar mais dispositivos."
+      ]
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "IPs podem ser estáticos (fixos) ou dinâmicos (atribuídos automaticamente)."
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "9. Meios de Transmissão"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Os dados são transmitidos por diferentes meios físicos ou sem fio:"
+    },
+    {
+      "tipo": "lista",
+      "itens": [
+        "Cabo coaxial: usado em redes antigas.",
+        "Par trançado (UTP/STP): comum em redes LAN.",
+        "Fibra óptica: alta velocidade e longa distância.",
+        "Wi-Fi: conexão sem fio via ondas de rádio."
+      ]
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "10. Noções Básicas de Segurança em Redes"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Segurança é essencial para proteger dados e sistemas:"
+    },
+    {
+      "tipo": "lista",
+      "itens": [
+        "Firewall: controla o tráfego entre redes.",
+        "Criptografia: protege dados contra interceptações.",
+        "Autenticação: garante que apenas usuários autorizados acessem a rede.",
+        "Antivírus e antimalware: protegem contra softwares maliciosos."
+      ]
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "11. Internet e Intranet"
+    },
+    {
+      "tipo": "lista",
+      "itens": [
+        "Internet: rede pública global, acessível a todos.",
+        "Intranet: rede privada usada dentro de empresas e organizações, com acesso restrito."
+      ]
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "12. Evolução das Redes de Computadores"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "A história das redes de computadores remonta ao início das comunicações digitais e passou por várias fases até se tornar o que conhecemos hoje."
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "Origens"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "As primeiras redes surgiram por volta da década de 1960, com destaque para a ARPANET, criada pelo Departamento de Defesa dos EUA. Ela foi a precursora da internet moderna e permitia a troca de mensagens entre universidades e instituições de pesquisa."
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "Décadas de 70 e 80"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Nesse período, surgiram protocolos fundamentais como o TCP/IP, que se tornaria o padrão para a comunicação na internet. Ao mesmo tempo, empresas começaram a criar suas redes locais (LANs), facilitando o compartilhamento de impressoras e arquivos."
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "Década de 90: Popularização da Internet"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Com o surgimento da World Wide Web (WWW) e navegadores como o Netscape, a internet começou a se expandir para usuários domésticos. Foi uma revolução na forma como as pessoas acessavam informação e se comunicavam."
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "Anos 2000 em diante"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "As redes passaram a ser cada vez mais móveis e integradas à vida cotidiana. A introdução do Wi-Fi, a banda larga, a computação em nuvem e os smartphones transformaram o modo como utilizamos a internet. Hoje, falamos em Internet das Coisas (IoT), onde dispositivos domésticos, veículos e sensores estão conectados à rede."
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "Tendências Atuais"
+    },
+    {
+      "tipo": "lista",
+      "itens": [
+        "Redes 5G: maior velocidade e menor latência para dispositivos móveis.",
+        "Edge computing: processamento de dados mais próximo da origem (dispositivos ou sensores).",
+        "Segurança de rede com IA: uso de inteligência artificial para prever e combater ameaças.",
+        "Redes definidas por software (SDN): maior controle e automação da infraestrutura de rede."
+      ]
+    },
+    {
+      "tipo": "referencias",
+      "itens": [
+        "Tanenbaum, A. S., & Wetherall, D. J. Redes de Computadores (5ª edição). Pearson. – Livro clássico e abrangente sobre todos os fundamentos das redes.",
+        "Kurose, J. F., & Ross, K. W. Redes de Computadores e a Internet: Uma Abordagem Top-Down (7ª edição). Pearson. – Excelente para iniciantes e para quem deseja uma visão prática e conceitual das redes.",
+        "Forouzan, B. A. Comunicação de Dados e Redes de Computadores (5ª edição). McGraw-Hill. – Referência sólida para topologias, protocolos e camadas OSI.",
+        "RFC 791 – Internet Protocol (IP). Disponível em: https://datatracker.ietf.org/doc/html/rfc791 – Documento oficial que define o protocolo IP (IPv4).",
+        "Cisco Networking Academy. Cursos e conteúdos técnicos atualizados sobre redes de computadores. https://www.netacad.com",
+        "CompTIA Network+ Certification Guide – Guia de certificação com tópicos amplamente cobrindo o conteúdo básico de redes.",
+        "Wikipedia – Computer Network. https://en.wikipedia.org/wiki/Computer_network – Útil para revisões rápidas e contextos históricos.",
+        "Internet Society (ISOC). https://www.internetsociety.org – Informações atualizadas sobre a evolução da internet e padronizações globais."
+      ]
+    }
+  ]
+}

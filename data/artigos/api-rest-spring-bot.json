@@ -1,0 +1,222 @@
+{
+  "conteudo": [
+    {
+      "tipo": "titulo",
+      "texto": "Guia Aprimorado para Desenvolvimento de APIs RESTful com Spring Boot"
+    },
+    {
+      "tipo": "imagem",
+      "src": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/apirest.webp",
+      "alt": "Imagem representativa de apirest com Spring Boot"
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "Resumo"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Este guia aprimorado expande cada etapa do desenvolvimento de uma API RESTful com Spring Boot, acrescentando explicações sobre por que cada escolha e configuração é importante. Iniciamos com os princípios do estilo REST e HATEOAS, avançamos pela configuração rápida via Spring Initializr, detalhamos a implementação de CRUD com Spring Data JPA, exploramos como personalizar a serialização JSON com Jackson, descrevemos o tratamento global de erros com @ControllerAdvice, demonstramos a configuração de segurança com Spring Security e JWT, explicamos como gerar documentação interativa com Swagger/OpenAPI, abordamos estratégias de testes automatizados e boas práticas REST, e concluímos com o processo de deploy em Heroku e sugestões de escalabilidade e CI/CD. Você ganhará não apenas o “como”, mas também o “porquê” por trás de cada passo, garantindo compreensão mais profunda e autonomia para adaptar o fluxo às suas necessidades."
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "1. Estilo REST e HATEOAS"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "O REST é um estilo arquitetural que define quatro restrições principais (cliente-servidor, sem estado, cache, sistema em camadas) para garantir escalabilidade e simplicidade em sistemas distribuídos. Em REST, recursos são abstrações que representam dados (por exemplo, “usuários” ou “pedidos”) e são identificados por URIs únicas, enquanto as operações são realizadas via métodos HTTP (GET, POST, PUT, DELETE)."
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "HATEOAS (Hypermedia as the Engine of Application State) é o quinto nível no Modelo de Maturidade Richardson, onde cada resposta inclui links dinâmicos para outras ações disponíveis, permitindo que clientes descubram funcionalidades sem documentação externa. Isso melhora a evolutividade da API, pois novos fluxos podem ser introduzidos sem alterar clientes existentes."
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "2. Configurando o Projeto com Spring Initializr"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "O Spring Initializr oferece uma interface web e API REST para gerar rapidamente projetos Spring Boot pré-configurados. Basta escolher:"
+    },
+    {
+      "tipo": "lista",
+      "itens": [
+        "Projeto: Maven (facilita integração com repositórios de artefatos)",
+        "Linguagem: Java (ampla adoção em empresas e ecossistema maduro)",
+        "Versão do Spring Boot: selecione a última estável para obter correções e novos recursos sem sacrificar estabilidade",
+        "Dependências: Spring Web (MVC e Tomcat embutido), Spring Data JPA (abstração de persistência), Spring Security (controle de acesso), Springdoc OpenAPI (documentação interativa via Swagger UI)."
+      ]
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Ao baixar o ZIP gerado, você já tem a estrutura de pacotes, arquivos de configuração e pom.xml prontos para iniciar o desenvolvimento."
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "3. CRUD com Spring Data JPA"
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "3.1 Definindo a Entidade"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Anote sua classe de domínio com @Entity e defina um campo @Id gerenciado por @GeneratedValue. Por exemplo:\n\n@Entity\npublic class Post {\n    @Id @GeneratedValue\n    private Long id;\n    private String titulo;\n    private String conteudo;\n    // getters e setters\n}\n\nIsso mapeia a classe ao banco de dados relacional e gera automaticamente o DDL necessário."
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "3.2 Criando o Repositório"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Estenda JpaRepository<Post, Long> para herdar métodos prontos como save(), findById(), findAll() e deleteById(). Isso reduz drasticamente o boilerplate de DAO tradicional."
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "3.3 Implementando Serviço e Controller"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Na camada de serviço (@Service), centralize regras como validações e transações.\nNo controller (@RestController), mapeie rotas em /posts:\n\n@GetMapping(\"/posts\")\npublic List<Post> listAll() { … }\n@PostMapping(\"/posts\")\npublic ResponseEntity<Post> create(@RequestBody Post post) { … }\n// PUT, DELETE similares\n\nEssa separação evita acoplamento e facilita testes unitários."
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "4. Customizando a Serialização JSON"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "O Spring Boot já registra um ObjectMapper do Jackson com configurações padrão. Para adaptar à sua API:\n- Datas e Java Time: registre o módulo JavaTimeModule para serializar LocalDateTime corretamente.\n- Estratégia de nomenclatura: altere PropertyNamingStrategy.SNAKE_CASE se preferir campo_exemplo em vez de campoExemplo.\n- Inclusão condicional: @JsonInclude(Include.NON_NULL) remove campos null do JSON, reduzindo payload.\n\nBasta expor um bean de configuração:\n\n@Bean\npublic Jackson2ObjectMapperBuilderCustomizer customizer() {\n    return builder -> builder.modules(new JavaTimeModule())\n                             .serializationInclusion(JsonInclude.Include.NON_NULL);\n}"
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "5. Tratamento Global de Erros"
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "5.1 Usando @ControllerAdvice"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Uma classe anotada com @ControllerAdvice intercepta exceções lançadas em qualquer controller."
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "5.2 Definindo Handlers"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Implemente métodos com @ExceptionHandler para capturar exceções específicas:\n\n@ExceptionHandler(EntityNotFoundException.class)\npublic ResponseEntity<ErrorResponse> handleNotFound(EntityNotFoundException ex) {\n    ErrorResponse err = new ErrorResponse(LocalDateTime.now(), 404, ex.getMessage());\n    return ResponseEntity.status(HttpStatus.NOT_FOUND).body(err);\n}\n\nIsso padroniza respostas de erro com campos como timestamp, status, mensagem e detalhes."
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "6. Segurança com Spring Security e JWT"
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "6.1 Configurando o Filtro de Segurança"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Defina um bean SecurityFilterChain para habilitar HTTP Basic ou configurações personalizadas:\n\nhttp.authorizeHttpRequests().antMatchers(\"/auth/\").permitAll()\n    .anyRequest().authenticated();\n\nIsso protege todas as rotas, exceto /auth."
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "6.2 Geração e Validação de JWT"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Geração: após login, crie token com username e roles no payload usando io.jsonwebtoken.Jwts.\nFiltro JWT: estenda OncePerRequestFilter para extrair o token do header Authorization, validar assinatura e popular SecurityContext."
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "6.3 Controle de Acesso Fino"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Use @PreAuthorize(\"hasRole('ADMIN')\") nos métodos para restringir chamadas a usuários com a role especificada."
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "7. Documentação com Swagger/OpenAPI"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Adicione a dependência:\n\n<dependency>\n  <groupId>org.springdoc</groupId>\n  <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>\n  <version>2.8.8</version>\n</dependency>\n\nAo iniciar a aplicação, acesse /swagger-ui.html para visualizar e testar endpoints interativamente."
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "Anotações Úteis"
+    },
+    {
+      "tipo": "lista",
+      "itens": [
+        "@Operation(summary=\"…\") descreve cada endpoint",
+        "@Parameter(description=\"…\") documenta parâmetros de métodos",
+        "@Schema(description=\"…\") enriquece modelos de dados em DTOs"
+      ]
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "8. Testes Automatizados e Boas Práticas"
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "8.1 Testes de Controller"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Use @WebMvcTest para carregar apenas o contexto MVC e MockMvc para simular requisições e validar respostas HTTP sem inicializar o servidor completo."
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "8.2 Boas Práticas REST"
+    },
+    {
+      "tipo": "lista",
+      "itens": [
+        "Versionamento: inclua /api/v1/ para evitar quebra de clientes em futuras mudanças.",
+        "Códigos de Status: 201 Created para POST bem-sucedido, 204 No Content para DELETE, etc.",
+        "Testes em Postman: organize coleções e use scripts pre-request e test para automação e validação de cenários."
+      ]
+    },
+    {
+      "tipo": "subtitulo",
+      "texto": "9. Deploy em Nuvem e Considerações Finais"
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "9.1 Deploy no Heroku"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Execute mvn clean package para gerar o artifact.\nNo Heroku, configure variáveis de ambiente (SPRING_DATASOURCE_URL, SPRING_DATASOURCE_USERNAME, SPRING_DATASOURCE_PASSWORD) para conexão segura com o banco.\nAdicione o buildpack Java se necessário."
+    },
+    {
+      "tipo": "subtopico",
+      "texto": "9.2 Escalabilidade e CI/CD"
+    },
+    {
+      "tipo": "paragrafo",
+      "texto": "Avalie serviços gerenciados (AWS EC2, Railway) para bancos de dados e monitoramento de logs e métricas.\nImplemente pipelines CI/CD (CircleCI, GitLab CI, AWS CodePipeline) para testar, empacotar e fazer deploy automático em múltiplos ambientes."
+    },
+    {
+      "tipo": "referencias",
+      "itens": [
+        "Fielding, R. “Chapter 5: Representational State Transfer (REST).” Discovering the World Wide Web, 2000. roy.gbiv.com",
+        "Fowler, M. “Richardson Maturity Model.” martinfowler.com, 2008. martinfowler.com",
+        "“Building an Application with Spring Boot.” Spring.io Guides.",
+        "“Introduction to Spring Data JPA.” Baeldung, 2025.",
+        "“Intro to the Jackson ObjectMapper.” Baeldung, 2023.",
+        "“Exception Handling in Spring MVC.” Spring Blog, 2013.",
+        "“Using JWT with Spring Security OAuth.” Baeldung, 2023.",
+        "“What Is OncePerRequestFilter?” Baeldung, 2025.",
+        "“@PreAuthorize Annotation.” Spring Security Docs, 2024.",
+        "“springdoc-openapi.” springdoc.org, 2024.",
+        "“Documenting a Spring REST API Using OpenAPI 3.0.” Baeldung, 2025.",
+        "“Using MockMvc With SpringBootTest vs. WebMvcTest.” Baeldung, 2024.",
+        "“Advanced API Testing Best Practices.” Postman, 2023.",
+        "“Deploying Spring Boot Applications to Heroku.” Heroku Dev Center, 2024.",
+        "“Best practices for developing and deploying cloud infrastructure with the AWS CDK.” AWS Docs, 2024."
+      ]
+    }
+  ]
+}

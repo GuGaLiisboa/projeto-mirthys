@@ -13,13 +13,11 @@
 
 <body>
   <header>
-    <h1>SIF Blog</h1>
+    <h1><a href="../index.html">SIF Blog</a></h1>
     <nav>
       <a href="#">Home</a>
-      <a href="#">Blog</a>
       <a href="#">Categorias</a>
       <a href="#">Sobre</a>
-      <a href="#">Contato</a>
     </nav>
   </header>
 
@@ -28,8 +26,8 @@
       <h1>Explorando o Mundo da Tecnologia</h1>
       <p>Seu portal para as últimas novidades, tutoriais e análises sobre o universo tech.</p>
       <div class="buttons">
-        <button class="primary">Explorar Artigos</button>
-        <button class="secondary">Ver Categorias</button>
+        <button onclick="window.location.href='pages/todos-artigos.html'">Explorar Artigos</button>
+        <button onclick="window.location.href='pages/categorias.html'" class="secondary">Ver Categorias</button>
       </div>
     </div>
     <div class="hero-img"></div>
@@ -37,44 +35,15 @@
 
   <section class="section">
     <p>Em Destaque</p>
-    <h2>Artigos Populares</h2>
-    <p>Confira nossos artigos mais lidos e compartilhados sobre tecnologia.</p>
+    <h2>Artigos Recentes</h2>
+    <p>Confira nossos artigos mais recentes sobre tecnologia.</p>
 
     <div class="cards">
-      <div class="card">
-        <div class="image"></div>
-        <div class="content">
-          <h3>O Futuro da Inteligência Artificial</h3>
-          <p>Como a IA está transformando indústrias e o que esperar nos próximos anos.</p>
-        </div>
-        <div class="card-footer">
-          <span>5 min</span><span>IA</span>
-        </div>
-      </div>
-      <div class="card">
-        <div class="image"></div>
-        <div class="content">
-          <h3>Guia Completo de Desenvolvimento</h3>
-          <p>As tecnologias e frameworks que todo desenvolvedor precisa conhecer.</p>
-        </div>
-        <div class="card-footer">
-          <span>8 min</span><span>Desenvolvimento</span>
-        </div>
-      </div>
-      <div class="card">
-        <div class="image"></div>
-        <div class="content">
-          <h3>Cibersegurança: Proteja seus Dados</h3>
-          <p>Dicas essenciais para manter suas informações seguras online.</p>
-        </div>
-        <div class="card-footer">
-          <span>6 min</span><span>Segurança</span>
-        </div>
-      </div>
+      <!-- Artigos serão carregados aqui via JavaScript -->
     </div>
 
     <div class="view-all">
-      <button>Ver Todos os Artigos</button>
+      <button onclick="window.location.href='pages/todos-artigos.html'">Ver Todos os Artigos</button>
     </div>
   </section>
 
@@ -82,54 +51,12 @@
     <h2>Categorias</h2>
     <p>Explore nosso conteúdo por tópicos específicos de tecnologia.</p>
 
-    <div class="categorias-grid">
-      <div class="categoria">
-        <i class="icon">&lt;/&gt;</i>
-        <h3>Desenvolvimento</h3>
-        <p>42 artigos</p>
-      </div>
-
-      <div class="categoria">
-        <i class="icon">⚙️</i>
-        <h3>IA</h3>
-        <p>28 artigos</p>
-      </div>
-
-      <div class="categoria">
-        <i class="icon">🗄️</i>
-        <h3>Dados</h3>
-        <p>19 artigos</p>
-      </div>
-
-      <div class="categoria">
-        <i class="icon">🌐</i>
-        <h3>Web</h3>
-        <p>35 artigos</p>
-      </div>
-
-      <div class="categoria">
-        <i class="icon">🔒</i>
-        <h3>Segurança</h3>
-        <p>23 artigos</p>
-      </div>
-
-      <div class="categoria">
-        <i class="icon">📱</i>
-        <h3>Mobile</h3>
-        <p>31 artigos</p>
-      </div>
-
-      <div class="categoria">
-        <i class="icon">⚡</i>
-        <h3>Performance</h3>
-        <p>17 artigos</p>
-      </div>
-    </div>
+    <div class="categorias-grid" id="categorias-container"></div>
   </section>
 
   <footer>
     <div class="container-footer">
-      <p>© 2025 SIF Blog. Todos os direitos reservados.</p>
+      <p>© <span id="current-year">2025</span> SIF Blog. Todos os direitos reservados.</p>
       <div class="social-icons">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -140,7 +67,8 @@
     </div>
   </footer>
 
-
+  <!-- Adiciona o script -->
+  <script src="scripts/script.js" defer></script>
 </body>
 
 </html>
