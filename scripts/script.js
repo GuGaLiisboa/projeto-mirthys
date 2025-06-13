@@ -60,7 +60,8 @@ const iconesCategorias = {
   "Back-end": "fas fa-server",
   "Front-end": "fas fa-desktop",
   "Fundamentos": "fas fa-microchip",
-  "Gestão de Projetos": "fas fa-tasks"
+  "Gestão de Projetos": "fas fa-tasks",
+  "DevOps": "fas fa-cogs"
 };
 
 fetch("artigos-index.json")

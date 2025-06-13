@@ -57,7 +57,7 @@
     "titulo": "DevOps e Infraestrutura como Código (IaC)",
     "slug": "devops-e-infraestrutura-como-codigo-iac",
     "descricao": "Uma exploração dos conceitos de DevOps e IaC, abordando seus princípios, ferramentas como Terraform e CloudFormation, práticas de segurança e as principais tendências do setor.",
-    "categoria": "Back-end",
+    "categoria": "DevOps",
     "tempo": "7 min",
     "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/devops.jpeg",
     "data": "2025-06-10"
