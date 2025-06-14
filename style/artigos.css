@@ -39,10 +39,107 @@
   color: #bbb;
 }
 
+/* Seção do Autor */
+.autor-section {
+  background: #1a1a1d;
+  border: 1px solid #2a2a2e;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.autor-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.autor-avatar {
+  width: 60px;
+  height: 60px;
+  background: #2a2a2e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #4a9eff;
+  flex-shrink: 0;
+}
+
+.autor-avatar i {
+  font-size: 1.5rem;
+  color: #4a9eff;
+}
+
+.autor-details {
+  flex: 1;
+}
+
+.autor-details h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.autor-bio {
+  color: #b0b0b5;
+  margin: 0 0 0.75rem 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.autor-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: #888;
+  flex-wrap: wrap;
+}
+
+.autor-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.autor-meta i {
+  font-size: 0.8rem;
+}
+
 .back-link {
   margin-top: 40px;
   display: block;
   text-align: center;
   color: white;
   text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .autor-info {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .autor-meta {
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .autor-meta span {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .autor-section {
+    padding: 1rem;
+  }
+
+  .autor-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
 }

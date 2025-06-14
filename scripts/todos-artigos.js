@@ -23,8 +23,9 @@ fetch("../artigos-index.json")
                 </div>
                 `;
 
-                const img = card.querySelector("img.artigo-img");
-                img.addEventListener("click", () => {
+                // Torna o card inteiro clicável
+                card.style.cursor = "pointer";
+                card.addEventListener("click", () => {
                     window.location.href = `artigo.html?slug=${artigo.slug}`;
                 });
 

@@ -1,0 +1,27 @@
+[
+  {
+    "especialidade": "Full-stack / Desenvolvimento e Análise de Dados",
+    "autor": {
+      "nome": "Luan Vitor de Sá Borges",
+      "bio": "Luan Vitor é estudante de Sistemas de Informação no UniRios e trabalha com analise e desenvolvimento full-stack, com forte atuação em desenvolvimento web, análise de dados e projetos de extensão. Apaixonado por tecnologia e inovação, já participou de diversas iniciativas acadêmicas e profissionais, unindo teoria e prática para gerar impacto real na comunidade, adora jogar RPG e cozinhar nas horas vagas.",
+      "imagem": ""
+    }
+  },
+  {
+    "especialidade": "Banco de Dados / Infraestrutura",
+    "autor": {
+      "nome": "Jário de Lima Silva",
+      "bio": "Jário é um estudante de Sistemas de Informação no UniRios, com atuação em banco de dados, redes e infraestrutura. Com paixão por tecnologia e jogos, já ministrou cursos de informática para iniciantes para o público adolescente e adulto e diversas iniciativas acadêmica como monitoria e projetos extensionista.",
+      "imagem": "https://via.placeholder.com/150"
+    }
+  },
+  {
+    "especialidade": "Full-stack / Desenvolvimento",
+    "autor": {
+      "nome": "Leonardo Vila Nova",
+      "bio": "Leonardo é desenvolvedor de software com forte atuação na arquitetura de soluções voltadas ao bem comum. Com experiência em tecnologias multiplataforma, incluindo Flutter, atua na criação de aplicações com foco em acessibilidade, desempenho e independência tecnológica.",
+      "imagem": "https://via.placeholder.com/150"
+    }
+  }
+   
+]

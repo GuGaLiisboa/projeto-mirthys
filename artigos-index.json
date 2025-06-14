@@ -6,7 +6,12 @@
     "categoria": "Back-end",
     "tempo": "18 min",
     "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/apirest.webp",
-    "data": "2025-06-10"
+    "data": "2025-06-10",
+    "autor": {
+      "nome": "Luan Vitor de Sá Borges",
+      "bio": "Desenvolvedor full-stack, analista de banco de dados, entusiasta de tecnologia e cozinheiro nas horas vagas.",
+      "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/apirest.webp"
+    }
   },
   {
     "titulo": "Arquitetura e Organização dos Computadores",
@@ -15,7 +20,12 @@
     "categoria": "Fundamentos",
     "tempo": "12 min",
     "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/arquitetura.jpeg",
-    "data": "2025-06-05"
+    "data": "2025-06-05",
+    "autor": {
+      "nome": "Jário de Lima Silva",
+      "bio": "Jário Lima, Analista de Banco e viciado em FPS",
+      "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/apirest.webp"
+    }
   },
   {
     "titulo": "Introdução às Redes de Computadores",
@@ -24,7 +34,12 @@
     "categoria": "Fundamentos",
     "tempo": "6 min",
     "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/redes.jpg",
-    "data": "2025-06-10"
+    "data": "2025-06-10",
+    "autor": {
+      "nome": "[Nome do Autor]",
+      "bio": "Estudante interessado em redes e infraestrutura de TI.",
+      "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/apirest.webp"
+    }
   },
   {
     "titulo": "Segurança em Aplicações Web: Ameaças e Boas Práticas",
@@ -33,7 +48,12 @@
     "categoria": "Segurança",
     "tempo": "12 min",
     "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/segurancaweb.webp",
-    "data": "2025-06-10"
+    "data": "2025-06-10",
+    "autor": {
+      "nome": "[Nome do Autor]",
+      "bio": "Estudante focado em segurança da informação e ethical hacking.",
+      "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/apirest.webp"
+    }
   },
   {
     "titulo": "Aplicações com Flutter: Preparação de Ambiente e Fundamentos",
@@ -42,7 +62,12 @@
     "categoria": "Mobile",
     "tempo": "5 min",
     "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/flutter.png",
-    "data": "2025-06-11"
+    "data": "2025-06-11",
+    "autor": {
+      "nome": "Leonardo Vila Nova",
+      "bio": "Desenvolvedor de soluções com propósito, unindo tecnologia, inovação social e impacto coletivo. Lidero com escuta estratégica e foco em transformar realidades por meio da tecnologia.",
+      "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/apirest.webp"
+    }
   },
   {
     "titulo": "Análise de Dados e Ferramentas de BI: Descobrindo o Poder por Trás dos Números",
@@ -51,7 +76,12 @@
     "categoria": "Dados",
     "tempo": "5 min",
     "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/powerbi2.jpg",
-    "data": "2025-06-11"
+    "data": "2025-06-11",
+    "autor": {
+      "nome": "[Nome do Autor]",
+      "bio": "Estudante interessado em ciência de dados e business intelligence.",
+      "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/apirest.webp"
+    }
   },
   {
     "titulo": "DevOps e Infraestrutura como Código (IaC)",
@@ -60,7 +90,12 @@
     "categoria": "DevOps",
     "tempo": "7 min",
     "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/devops.jpeg",
-    "data": "2025-06-10"
+    "data": "2025-06-10",
+    "autor": {
+      "nome": "[Nome do Autor]",
+      "bio": "Estudante focado em DevOps, automação e infraestrutura como código.",
+      "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/apirest.webp"
+    }
   },
   {
     "titulo": "Guia Completo sobre Metodologias Ágeis: Scrum e Kanban",
@@ -69,7 +104,12 @@
     "categoria": "Gestão de Projetos",
     "tempo": "10 min",
     "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/scrum1.png",
-    "data": "2025-06-10"
+    "data": "2025-06-10",
+    "autor": {
+      "nome": "[Nome do Autor]",
+      "bio": "Estudante interessado em gestão de projetos e metodologias ágeis.",
+      "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/apirest.webp"
+    }
   },
   {
     "titulo": "Desvendando a Nuvem: Modelos de Serviço e os Gigantes do Mercado",
@@ -78,6 +118,11 @@
     "categoria": "Fundamentos",
     "tempo": "9 min",
     "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/cloud.webp",
-    "data": "2025-05-24"
+    "data": "2025-05-24",
+    "autor": {
+      "nome": "Álvaro de Sá",
+      "bio": "Estudante apaixonado por computação em nuvem e arquitetura de sistemas distribuídos.",
+      "imagem": "https://pub-b2da8b9dc011483bb03204134fd60136.r2.dev/apirest.webp"
+    }
   }
 ]

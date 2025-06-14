@@ -17,7 +17,7 @@
     <nav>
       <a href="../index.html">Home</a>
       <a href="../pages/todas-categorias.html">Categorias</a>
-      <a href="">Sobre</a>
+      <a href="../pages/sobre.html">Sobre</a>
     </nav>
   </header>
 
@@ -34,87 +34,132 @@
       throw new Error("Slug ausente na URL");
     }
 
-    fetch(`../data/artigos/${slug}.json`)
-      .then(res => {
-        if (!res.ok) {
-          throw new Error("Artigo não encontrado");
-        }
-        return res.json();
-      })
-      .then(data => {
-        const referencias = [];
+    // Buscar informações do artigo no índice
+    fetch(`../artigos-index.json`)
+      .then(res => res.json())
+      .then(artigos => {
+        const artigo = artigos.find(a => a.slug === slug);
+        
+        // Buscar conteúdo do artigo
+        return fetch(`../data/artigos/${slug}.json`)
+          .then(res => {
+            if (!res.ok) {
+              throw new Error("Artigo não encontrado");
+            }
+            return res.json();
+          })
+          .then(data => {
+            const referencias = [];
+            let titulo = "";
 
-        data.conteudo.forEach(item => {
-          let el;
-          switch (item.tipo) {
-            case "titulo":
-              el = document.createElement("h1");
-              break;
-            case "subtitulo":
-              el = document.createElement("h2");
-              break;
-            case "subtopico":
-              el = document.createElement("h3");
-              el.style.marginTop = "20px";
-              break;
-            case "paragrafo":
-              el = document.createElement("p");
-              break;
-            case "lista":
-              el = document.createElement("ul");
-              item.itens.forEach(texto => {
+            data.conteudo.forEach((item, index) => {
+              let el;
+              switch (item.tipo) {
+                case "titulo":
+                  titulo = item.texto;
+                  el = document.createElement("h1");
+                  el.textContent = item.texto;
+                  container.appendChild(el);
+                  
+                  // Adicionar seção de autor após o título
+                  if (artigo && artigo.autor) {
+                    const autorSection = document.createElement("div");
+                    autorSection.className = "autor-section";
+                    autorSection.innerHTML = `
+                              <div class="autor-info">
+                                <div class="autor-avatar" style="position: relative; width: 80px; height: 80px;">
+                                      <img 
+      src="${artigo.autor.imagem || ''}" 
+      alt="${artigo.autor.nome}" 
+      style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; display: block;" 
+      onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';"
+    />
+
+                                  <i class="fas fa-user-circle" style="font-size: 80px; color: #ccc; display: none; position: absolute; top: 0; left: 0;"></i>
+                                </div>
+                                <div class="autor-details">
+                                  <h4>Por ${artigo.autor.nome}</h4>
+                                  <p class="autor-bio">${artigo.autor.bio || 'Estudante de Sistemas de Informação'}</p>
+                                  <div class="autor-meta">
+                                    <span><i class="fas fa-calendar"></i> ${new Date(artigo.data).toLocaleDateString('pt-BR')}</span>
+                                    <span><i class="fas fa-clock"></i> ${artigo.tempo}</span>
+                                    <span><i class="fas fa-tag"></i> ${artigo.categoria}</span>
+                                  </div>
+                                </div>
+                              </div>
+                            `;
+
+                    container.appendChild(autorSection);
+                  }
+                  return;
+                case "subtitulo":
+                  el = document.createElement("h2");
+                  break;
+                case "subtopico":
+                  el = document.createElement("h3");
+                  el.style.marginTop = "20px";
+                  break;
+                case "paragrafo":
+                  el = document.createElement("p");
+                  break;
+                case "lista":
+                  el = document.createElement("ul");
+                  item.itens.forEach(texto => {
+                    const li = document.createElement("li");
+                    li.textContent = texto;
+                    el.appendChild(li);
+                  });
+                  break;
+                case "imagem":
+                  el = document.createElement("img");
+                  el.src = item.src;
+                  el.alt = item.alt || "";
+                  el.style.maxWidth = "100%";
+                  el.style.margin = "20px 0";
+                  break;
+                case "referencias":
+                  referencias.push(...item.itens);
+                  return;
+              }
+
+              if (item.tipo !== "lista" && item.tipo !== "referencias") {
+                el.textContent = item.texto;
+              }
+
+              container.appendChild(el);
+            });
+
+            if (referencias.length > 0) {
+              const refTitle = document.createElement("h2");
+              refTitle.textContent = "Referências";
+              container.appendChild(refTitle);
+
+              const ul = document.createElement("ul");
+              referencias.forEach(texto => {
                 const li = document.createElement("li");
                 li.textContent = texto;
-                el.appendChild(li);
+                ul.appendChild(li);
               });
-              break;
-            case "imagem":
-              el = document.createElement("img");
-              el.src = item.src;
-              el.alt = item.alt || "";
-              el.style.maxWidth = "100%";
-              el.style.margin = "20px 0";
-              break;
-            case "referencias":
-              referencias.push(...item.itens);
-              return; // pula o append aqui, será feito no final
-          }
+              container.appendChild(ul);
+            }
 
-          if (item.tipo !== "lista" && item.tipo !== "referencias") {
-            el.textContent = item.texto;
-          }
-
-          container.appendChild(el);
-        });
-
-        if (referencias.length > 0) {
-          const refTitle = document.createElement("h2");
-          refTitle.textContent = "Referências";
-          container.appendChild(refTitle);
-
-          const ul = document.createElement("ul");
-          referencias.forEach(texto => {
-            const li = document.createElement("li");
-            li.textContent = texto;
-            ul.appendChild(li);
+            // Atualizar título da página
+            if (titulo) {
+              document.title = `${titulo} • SIF Blog`;
+            }
           });
-          container.appendChild(ul);
-        }
       })
       .catch(err => {
         container.innerHTML = `<p>Erro ao carregar o artigo: ${err.message}</p>`;
       });
   </script>
 
-
   <footer>
     <div class="container-footer">
       <p>© 2025 SIF Blog. Todos os direitos reservados.</p>
       <div class="social-icons">
         <a href="https://www.facebook.com/unirios.oficial/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-        <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
         <a href="https://www.instagram.com/sif.unirios/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-        <!-- <a href="#"><i class="fab fa-linkedin-in"></i></a> -->
         <a href="https://github.com/Sistemas-de-Informacao-6/blog-sistemas" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
       </div>
     </div>
